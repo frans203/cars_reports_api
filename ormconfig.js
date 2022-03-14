@@ -25,7 +25,7 @@ switch (process.env.NODE_ENV) {
     case "production":
         Object.assign(dbConfig, {
             type: "postgres",
-            url: process.env.HEROKU_POSTGRESQL_MAUVE_URL,
+            url: process.env.DATABASE_URL,
             migrationsRun: true,
             entities: ["**/*.entity.js"],
             ssl: {
